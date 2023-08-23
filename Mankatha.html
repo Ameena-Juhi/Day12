@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <h1>Welcome to Mankatha!</h1>
+</head>
+<body>
+        <form action="CardGameServlet" method="post" name="playerForm" align="center">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+            <br>
+            <label for="bet">Bet Amount</label>
+            <input type="text" name="amnt" id="amnt">
+            <br>
+            <div>
+                <label for="type">Card to bet on!</label>
+                <input type="text" name="card" id="card">
+            </div>
+            <br>
+           <div>
+            <select name="pile" id="pile">
+                <option value="in">IN</option>
+                <option value="out">OUT</option>
+            </select>
+        </div>
+            <button type="submit" name="submit" id="submit">Play!</button>
+        </form>
+        <p>The bet card is:</p>
+        <p><span th:text="${reading}">Face card</span></p>
+</body>
+</html>
